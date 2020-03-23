@@ -1,6 +1,6 @@
 # IPL dataset visualization
 
-### Install
+## Install
 
 **1: Install Node**
 
