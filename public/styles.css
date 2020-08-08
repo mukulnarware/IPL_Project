@@ -1,3 +1,19 @@
 body {
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: solid red;
+    margin: 3px;
+    padding: 24px 17px;
+    
 }
+
+.container{
+       
+   padding: 9px 4px;
+   border: solid yellowgreen;
+
+}
+h3{ 
+     margin: 4px 5px;
+     padding: 9px 3px;
+    }
