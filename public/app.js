@@ -97,7 +97,7 @@ function visualizeMatchesPlayedPerYear(matchesPlayedPerYear) {
         text: 'Matches Played Per Year'
     },
     subtitle: {
-        text: 'Source: <a href="http://en.wikipedia.org/wiki/List_of_cities_proper_by_population">Wikipedia</a>'
+        text: 'Source: <a href="http://en.wikipedia.org/wiki/List_of_cities_proper_by_population">IPL Dataset</a>'
     },
     xAxis: {
         type: 'category',
@@ -119,7 +119,7 @@ function visualizeMatchesPlayedPerYear(matchesPlayedPerYear) {
         enabled: false
     },
     tooltip: {
-        pointFormat: 'Population in 2017: <b>{point.y:.1f} millions</b>'
+        pointFormat: 'Matches played: <b>{point.y:.1f} </b>'
     },
     series: [{
         name: 'Years',
@@ -189,7 +189,7 @@ function visualizeMatchesWonByEachTeam(matchesWonByEachTeam) {
         text: 'Matches Won By Each Team For Season 2016'
     },
     subtitle: {
-        text: 'Source: <a href="http://en.wikipedia.org/wiki/List_of_cities_proper_by_population">Wikipedia</a>'
+        text: 'Source: <a href="http://en.wikipedia.org/wiki/List_of_cities_proper_by_population">IPL Dataset</a>'
     },
     xAxis: {
         type: 'category',
@@ -211,7 +211,7 @@ function visualizeMatchesWonByEachTeam(matchesWonByEachTeam) {
         enabled: false
     },
     tooltip: {
-        pointFormat: 'Population in 2017: <b>{point.y:.1f} millions</b>'
+        pointFormat: 'Matches Won: <b>{point.y:.1f} </b>'
     },
     series: [{
         name: 'Winning Teams In IPL',
@@ -253,7 +253,10 @@ function visualizeExtraRunByTeam(extraRunByTeam) {
         'Source: <a href="https://www.kaggle.com/nowke9/ipldata/data">IPL Dataset</a>'
     },
     xAxis: {
-      type: "category"
+     type: "category"
+      // title: {
+      //   text: "Teams"
+      // }
     },
     yAxis: {
       min: 0,
@@ -263,7 +266,7 @@ function visualizeExtraRunByTeam(extraRunByTeam) {
     },
     series: [
       {
-        name: " Teams ",
+        name: "Runs",
         data: seriesData
       }
     ]
@@ -288,7 +291,10 @@ function visualizeEconomicBowlers(economicBowler) {
         'Source: <a href="https://www.kaggle.com/nowke9/ipldata/data">IPL Dataset</a>'
     },
     xAxis: {
-      type: "category"
+       type: "category"
+      // title: {
+      //     text : "Bowlers"
+      // }
     },
     yAxis: {
       min: 0,
@@ -298,7 +304,7 @@ function visualizeEconomicBowlers(economicBowler) {
     },
     series: [
       {
-        name: "Bowlers",
+        name: "Economy rate",
         data: seriesData
       }
     ]

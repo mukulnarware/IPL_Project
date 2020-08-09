@@ -1,5 +1,7 @@
 body {
     /* font-family: sans-serif; */
+    display: flex;
+    flex-direction: column;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     border: solid red;
     margin: 3px;
@@ -11,6 +13,8 @@ body {
        
    padding: 9px 4px;
    border: solid yellowgreen;
+   border-style: double;
+   border-radius: 50px;
 
 }
 h3{ 
