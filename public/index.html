@@ -7,39 +7,80 @@
     <meta name="description" content="IPL visualization">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <link href="./styles.css" rel="stylesheet">
+    <script src="./app.js"></script>
     <title>
         IPL visualization
     </title>
+
+
+
+
+
+
+
+
+
 </head>
 
-<body> <div> <h3>Website by Mukul Narware </h3></div>
+<body>
+    <div>
+        <h3>Developed By Mukul Narware </h3>
+    </div>
     <h1>IPL Dataset Visualization</h1>
-    
+
     <div class="container" id="matches-played-per-year" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
     <script src="https://code.highcharts.com/highcharts.js"></script>
-<!-- separate -->
+    <!-- separate -->
 
     <div class="container" id="matches-won-by-each-team" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
     <script src="https://code.highcharts.com/highcharts.js"></script>
 
-<!-- separate -->
+    <!-- separate -->
 
-<div class="container" id="extra-run-by-team" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+    <div class="container" id="extra-run-by-team" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
     <script src="https://code.highcharts.com/highcharts.js"></script>
 
-<!-- separate -->
+    <!-- separate -->
 
-<div class="container" id="top10-economic-bowlers" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-
-    <script src="./app.js"></script>
-<!-- /////////////////////////////////////////////////////////////////////////// -->
-<div class="container" id="matches-played-by-city" style="min-width: 310px; height: 600px; margin: 0 auto"></div>
+    <div class="container" id="top10-economic-bowlers" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
     <script src="https://code.highcharts.com/highcharts.js"></script>
 
     <script src="./app.js"></script>
+    <!-- /////////////////////////////////////////////////////////////////////////// -->
+    <div class="container" id="matches-played-by-city" style="min-width: 310px; height: 600px; margin: 0 auto"></div>
+
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
 
 
 
+    <!-- //////////////////////////////////////////////////// -->
+    <!--Making an input block -->
+
+    <div class="stage2">
+        <!-- <h2>My name is mukul Micky</h3> -->
+        <input id="txt" type="number" class="UInput" width="58px" placeholder="Enter Year" />
+        <button class="UBtn" id="btn">Submit</button>
+
+
+    </div>
+    <script type="text/javascript" src="../index.js">
+
+
+
+    </script>
+    <!-- <script type="text/javascript">    getInputData();</script> -->
+
+
+
+    <div class="UserIn">
+
+        <div class="container" id="year-wise-bowler" style="min-width: 310px; height: 400px; margin: 0 auto">
+        </div>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+
+    </div>
+
+    <script src="./app.js"></script>
 
 </body>

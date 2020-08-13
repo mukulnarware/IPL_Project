@@ -1,7 +1,12 @@
+
 const fs = require("fs");
 const csv = require("csvtojson");
 const matchesPlayedPerYear = require("./ipl/matchesPlayedPerYear");
 /////
+
+//const yearWiseBowler = require("./ipl/yearWiseBowler");
+
+//////
 const extraRunByTeam = require("./ipl/extraRunByTeam");
 /////
 const economicBowler = require("./ipl/economicBowler");
@@ -11,8 +16,8 @@ const matchesPlayedByCity = require("./ipl/matchesPlayedByCity");
 const matchesWonByEachTeam = require("./ipl/matchesWonByEachTeam");
 const { fileURLToPath } = require("url");
 const { match } = require("assert");
-
 ////
+
 const DELIVERIES_FILE_PATH = "./csv_data/deliveries.csv";
 
 const MATCHES_FILE_PATH = "./csv_data/matches.csv";
@@ -27,13 +32,22 @@ const JSON_OUTPUT_FILE_PATH2 = "./public/data2.json";
 const JSON_OUTPUT_FILE_PATH3 = "./public/data3.json";
 // Path to find filtered data of "matches Played In cities" of IPL from data4.json file
 const JSON_OUTPUT_FILE_PATH4 = "./public/data4.json";
+//////path to find year wise top ten economical bowler by user input
+const JSON_OUTPUT_FILE_PATH5 = "./public/data5.json";
+const JSON_OUTPUT_FILE_PATH6= "./public/data6.json";
 
 
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+///////////////////
 function main() {
-
-
-
-  ////////////////
+  ////////////////////////////////////////////////
   csv()
 
     .fromFile(MATCHES_FILE_PATH)
@@ -56,14 +70,29 @@ function main() {
         .then(matches => {
           let ID_Of2016 = {};
           let ID_Of2015 = [];
+          /////////////////////// //////userInput///////////
+
+          // let ID_OfSeason = [];      console.log("year***"+year);
+
+          // for (let match of matches) {
+
+          //   if (match.season == year) {
+          //     if (!ID_OfSeason.includes(match.id)) { ID_OfSeason.push(match.id); }
+          //   }
+
+          // }
+          // //  alert('you have passed:' + year);
+
+          // let result5 = yearWiseBowler(deliveries, ID_OfSeason);    //Here ID_OfSeason  is an array            
+          // saveEconomicBowlerByUserInput(result5);
+
+          ///////////////////////////////////
+
           for (let match of matches) {
 
             if (match.season == "2015") {
               if (!ID_Of2015.includes(match.id)) { ID_Of2015.push(match.id); }
             }
-
-
-
             if (match.season == "2016") {
               if (!ID_Of2016[match.id]) { ID_Of2016[match.id] = match.winner; }
 
@@ -72,7 +101,7 @@ function main() {
 
 
           }
-          // console.log(ID_Of2016);
+
 
           let result3 = economicBowler(deliveries, ID_Of2015);    //Here ID_Of2015   is an array            
           let result2 = extraRunByTeam(deliveries, ID_Of2016);  //Here ID_Of2016  is an object
@@ -85,6 +114,26 @@ function main() {
     });
 
 }
+
+
+//////////////////////////////////////////////
+// saving here the data of economic bowler by user input
+
+function saveEconomicBowlerByUserInput(result6) {  //console.log(result5);
+  const jsonData = {
+    yearWiseBowler: result6
+  };
+
+  const jsonString = JSON.stringify(jsonData);
+  fs.writeFile(JSON_OUTPUT_FILE_PATH6, jsonString, "utf8", err => {
+    if (err) {
+      console.error(err);
+    }
+  });
+}
+
+module.exports=saveEconomicBowlerByUserInput;
+
 ///////////////////////////////////////////////////
 // saving here matches played By city In IPL in data4.json
 function saveMatchesPlayedByCity(result4) {
@@ -162,7 +211,6 @@ function saveMatchesWonByEachTeam(result1) {
     }
   });
 }
-
 
 
 main();

@@ -11,6 +11,7 @@ body {
 
 .container{
        
+
    padding: 9px 4px;
    border: solid yellowgreen;
    border-style: double;
@@ -20,4 +21,44 @@ body {
 h3{ 
      margin: 4px 5px;
      padding: 9px 3px;
+    }
+    .stage2{
+        display: inline-block;
+        /* border: solid rebeccapurple; */
+        margin-top: 22px;
+        margin-left: 35%;
+        padding: 4px 19px;
+    
+    }
+    button{
+    
+    
+        color: blanchedalmond;
+        size: 1rem;
+        font-size: large;
+        background-color: grey;
+        font-weight: bold;
+        cursor: pointer;
+    }
+button:hover{ 
+
+    color: blanchedalmond;
+    size: 1rem;
+    font-size: large;
+    background-color: black;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+
+    .UInput{
+
+      border: solid black;
+      /* size: 1rem; */
+    }
+    .btnn{ 
+        display: flex;
+        align-items: center;
+        border:solid black;
     }
